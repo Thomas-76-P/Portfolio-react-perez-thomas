@@ -1,0 +1,104 @@
+/* police globale */
+:root {
+  --jd-gray: #efefef;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: "Nunito Sans", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+}
+
+/* Header */
+.navbar .nav-link {
+  text-transform: uppercase;
+  transition: color .2s, text-decoration-color .2s;
+}
+
+.navbar .nav-link:hover {
+  text-decoration: underline;
+}
+
+.navbar .nav-link.active {
+  color: var(--bs-primary) !important;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+/* Section title */
+.section-title hr {
+  width: 120px;
+  height: 3px;
+  opacity: 1;
+  border: 0;
+  background: var(--bs-primary);
+  margin: .75rem auto 0;
+}
+
+/* Hero */
+.hero {
+  min-height: 100vh;
+  background: center/cover no-repeat url('../public/img/hero.jpg');
+  position: relative;
+}
+
+.hero::before {
+  /* overlay */
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, .45);
+}
+
+.hero .hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* Cards : hover ombre + fond #efefef */
+.card-hover {
+  transition: background-color .2s, box-shadow .2s, transform .2s;
+}
+
+.card-hover:hover {
+  background-color: var(--jd-gray);
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
+  transform: translateY(-2px);
+}
+
+/* Boutons : assombrir au survol (global) */
+.btn:hover {
+  filter: brightness(0.92);
+}
+
+/* Spécifique Portfolio : bouton qui S’ÉCLAIRCIT au survol */
+.btn-portfolio:hover {
+  filter: brightness(1.08);
+}
+
+/* Footer */
+footer a {
+  text-decoration: none;
+  transition: color .2s, font-weight .2s;
+}
+
+.footer-links a:hover {
+  font-weight: 700;
+}
+
+.footer-social i {
+  color: #adb5bd;
+  transition: color .2s;
+}
+
+.footer-social a:hover i {
+  color: #fff;
+}
+
+/* Utilitaires */
+.bg-banner {
+  background: center/cover no-repeat url('../public/img/banner-blue.jpg');
+}
